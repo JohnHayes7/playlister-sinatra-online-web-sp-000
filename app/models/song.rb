@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base 
-
+  # include Slugified::Instance_methods
  belongs_to :artist
  has_many :song_genres
  has_many :genres, through: :song_genres

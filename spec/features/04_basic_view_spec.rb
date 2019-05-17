@@ -70,7 +70,7 @@ describe "Playlister Basics" do
         expect(page).to have_css("a[href='/genres/#{@genre.slug}']")
       end
     end
-  end
+  
 
   describe "show pages" do
     describe "/songs/:slug" do
@@ -98,6 +98,7 @@ describe "Playlister Basics" do
         expect(page).to have_css("a[href='/genres/#{@genre.slug}']")
       end
     end
+  end
 
     describe "/artists/:slug" do
       before do

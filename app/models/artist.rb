@@ -1,4 +1,5 @@
 class Artist < ActiveRecord::Base
+  # include Slugified::Instance_methods
   has_many :songs
   has_many :genres, through: :songs
   
@@ -9,7 +10,7 @@ class Artist < ActiveRecord::Base
   def self.find_by_slug(slug)
     name = slug.gsub("-", " ").split.map(&:capitalize).join(" ")
     
-    @artist = Artist.all.find_by_name(name)
+    self.all.find_by_name(name)
   end
   
   
